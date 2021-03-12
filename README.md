@@ -1,2 +1,2 @@
 # viope
-Orientaatio ohjelmistotuotantoon Viope tehtävien vastaukset.
+Eri koodikielten viope tehtävien vastaukset
