@@ -64,22 +64,21 @@ class Katseluloki
                 case 4:
                     if (File.Exists("tietokanta.xml"))
                     {
-                        //Leffa.Clear();
-                        //Leffax.Clear();
-
-                        //XmlRootAttribute xRoot = new XmlRootAttribute();
-                        //xRoot.ElementName = "message";
-                        // xRoot.Namespace = "http://www.cpandl.com";
-                        //xRoot.IsNullable = true;
-
-                        XmlSerializer reader = new XmlSerializer(typeof(Leffa));
+                        XmlSerializer reader = new XmlSerializer(typeof(List<Leffa>));
                         StreamReader file = new StreamReader("tietokanta.xml");
-                        Console.WriteLine("1");
-                        Leffa leffax = (Leffa)reader.Deserialize(file);
-                        Console.WriteLine("2");
-                        Console.WriteLine(leffax);
+                        List<Leffa> leffas = (List<Leffa>)reader.Deserialize(file);
                         Console.WriteLine("\rTietokanta ladattu.");
-                    } else {
+
+                        foreach (var leffaLoad in leffas)
+                        {
+                            nimi = leffaLoad.Nimi;
+                            kesto = leffaLoad.Kesto;
+                            vuosi = leffaLoad.Vuosi;
+                            leffat.Add(new Leffax(nimi, kesto, vuosi));
+                        }
+                    }
+                    else
+                    {
                         Console.WriteLine("Tietokantaa ei saatavilla.");
                     }
                     break;
@@ -88,10 +87,12 @@ class Katseluloki
                     List<Leffa> objList = new List<Leffa>();
                     foreach (var leffa in leffat)
                     {
-                        Leffa obj = new Leffa();
-                        obj.Nimi = leffa.Nimi;
-                        obj.Kesto = leffa.Kesto;
-                        obj.Vuosi = leffa.Vuosi;
+                        Leffa obj = new Leffa
+                        {
+                            Nimi = leffa.Nimi,
+                            Kesto = leffa.Kesto,
+                            Vuosi = leffa.Vuosi
+                        };
                         objList.Add(obj);
                     }
 
