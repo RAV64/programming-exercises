@@ -31,13 +31,13 @@ function firstThreeLetters(name){
 
 function processName() {
 
-    var name = getName();
-    var capName = upper(name);
-    var lowName = lower(name);
-    var lenName = len(name);
-    var muumi = containsMuumi(name);
-    var firstL = firstLetter(name);
-    var first3L = firstThreeLetters(name);
+    const name = getName();
+    const capName = upper(name);
+    const lowName = lower(name);
+    const lenName = len(name);
+    const muumi = containsMuumi(name);
+    const firstL = firstLetter(name);
+    const first3L = firstThreeLetters(name);
 
     document.getElementById("upperCase").innerHTML = capName;
     document.getElementById("lowerCase").innerHTML = lowName;

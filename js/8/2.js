@@ -17,14 +17,13 @@ function customerFee(kelaCash, fee) {
 }
 
 function calculate() {
-    var len = Number(document.getElementById("length").value);
-    var kelaCash = maxKelaMonney(len);
-    var fee = Number(document.getElementById("doctorsFee").value);
-    var cusFee = customerFee(kelaCash, fee)
-    var x1 = "Doctor's Fee is " + fee.toFixed(2) + " euros.<br>";
-    var x2 = "Kela reimbursement is " + kelaCash.toFixed(2) + " euroa.<br>";
-    var x3 = "Office Fee is 15.90 euros<br>";
-    var x4 = "Customer needs to pay " + cusFee.toFixed(2) + " euros.";
-    var x = x1 + x2 + x3 + x4;
-    document.getElementById("answer").innerHTML = x;
+    const len = Number(document.getElementById("length").value);
+    const kelaCash = maxKelaMonney(len);
+    const fee = Number(document.getElementById("doctorsFee").value);
+    const cusFee = customerFee(kelaCash, fee);
+    const x1 = "Doctor's Fee is " + fee.toFixed(2) + " euros.<br>";
+    const x2 = "Kela reimbursement is " + kelaCash.toFixed(2) + " euroa.<br>";
+    const x3 = "Office Fee is 15.90 euros<br>";
+    const x4 = "Customer needs to pay " + cusFee.toFixed(2) + " euros.";
+    document.getElementById("answer").innerHTML = x1 + x2 + x3 + x4;
 }

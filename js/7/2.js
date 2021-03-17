@@ -1,2 +1,2 @@
-var randomizedNumber = Math.random();
+const randomizedNumber = Math.random();
 console.log(randomizedNumber);

@@ -1,8 +1,8 @@
 function processName() {
-    var name = document.getElementById("name").value;
-    var capName = name.toUpperCase();
-    var lowName = name.toLowerCase();
-    var lenName = name.length;
+    const name = document.getElementById("name").value;
+    const capName = name.toUpperCase();
+    const lowName = name.toLowerCase();
+    const lenName = name.length;
     document.getElementById("upperCase").innerHTML =
     `With upper case letters: ${capName}`
     document.getElementById("lowerCase").innerHTML =

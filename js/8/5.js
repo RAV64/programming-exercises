@@ -1,6 +1,6 @@
 function tellAge() {
-    var yob = Number(document.getElementById("yearOfBirth").value);
-    var year = new Date().getFullYear();
+    const yob = Number(document.getElementById("yearOfBirth").value);
+    const year = new Date().getFullYear();
     if (yob > year){
         document.getElementById("answer").innerHTML =
         "You can't use this program from future.";

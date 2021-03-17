@@ -1,4 +1,4 @@
-function maxKelaMonney(length){
+function maxKelaMoney(length){
     if (length<=10){
         return 8.00
     } else if (length<=20){
@@ -13,9 +13,9 @@ function maxKelaMonney(length){
 }
 
 function calculate() {
-    var len = Number(document.getElementById("length").value);
-    var kelaCash = maxKelaMonney(len);
-    var fee = document.getElementById("doctorsFee").value;
+    const len = Number(document.getElementById("length").value);
+    const kelaCash = maxKelaMoney(len);
+    const fee = document.getElementById("doctorsFee").value;
     document.getElementById("answer").innerHTML =
     `Length of visit is ${len} minutes.<br>Kela reimbursement is ${kelaCash.toFixed(2)} euros.`
 }

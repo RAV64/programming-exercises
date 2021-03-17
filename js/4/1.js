@@ -1,6 +1,6 @@
 function calculateFee() {
-	var price = document.getElementById("price").value;
-	var fee = (price * 0.0344).toFixed(2);
+	const price = document.getElementById("price").value;
+	let fee = (price * 0.0344).toFixed(2);
 	if (fee <= 2400) {
 	fee = (2400).toFixed(2);
     }

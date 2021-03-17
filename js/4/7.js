@@ -1,6 +1,6 @@
 function tellInfractionFine(){
-    ds = Number(document.getElementById("drivingSpeed").value);
-    sl = Number(document.getElementById("speedLimit").value);
+    let ds = Number(document.getElementById("drivingSpeed").value);
+    let sl = Number(document.getElementById("speedLimit").value);
     if (ds <= sl) {
         document.getElementById("answer").innerHTML =
         "No speeding, no fine.";

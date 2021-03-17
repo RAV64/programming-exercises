@@ -1,33 +1,29 @@
 function isSunday(dateText) {
-
-	var myDate = new Date();
-	var day = Number(dateText.substring(0,2));
-    var month = Number(dateText.substring(3,5))-1;
-    var year = Number(dateText.substring(6,10));
+    const myDate = new Date();
+    const day = Number(dateText.substring(0, 2));
+    const month = Number(dateText.substring(3, 5)) - 1;
+    const year = Number(dateText.substring(6, 10));
     myDate.setFullYear(year, month, day);
-
-    if(myDate.getDay() == 0) {
-        return true
-    } else {
-        return false
-    }
+    return myDate.getDay() === 0;
 }
 
 function calculate() {
 
-    var workTitle = document.getElementById("title").value;
-    var date = document.getElementById("date").value;
-    var isSun = isSunday(date);
-    var startTime = document.getElementById("startTime").value;
-    var endTime = document.getElementById("endTime").value;
-    var desc = document.getElementById("description").value;
+    let price;
+    let sun;
+    const workTitle = document.getElementById("title").value;
+    const date = document.getElementById("date").value;
+    const isSun = isSunday(date);
+    const startTime = document.getElementById("startTime").value;
+    const endTime = document.getElementById("endTime").value;
+    const desc = document.getElementById("description").value;
 
     if (isSun){
-        var sun = "(sunday)"
-        var price = 72
+        sun = "(sunday)";
+        price = 72;
     } else {
-        var sun = "(work day)."
-        var price = 48
+        sun = "(work day).";
+        price = 48;
     }
 
     document.getElementById("answer").innerHTML =
