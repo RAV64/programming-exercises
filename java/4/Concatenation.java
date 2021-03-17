@@ -1,5 +1,5 @@
 public class Concatenation {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
         int first = 1;
         String fourth = "9";

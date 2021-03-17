@@ -6,10 +6,6 @@ public class OddOrEven {
         System.out.print("Type in an integer: ");
         int num = sc.nextInt();
         sc.close();
-        if (num % 2 == 0) {
-            System.out.println("Number " + num + " is even.");
-        } else {
-            System.out.println("Number " + num + " is odd.");
-        }
+        System.out.println("Number " + num + " is " + ((num % 2 == 0) ? "even." : "odd."));
     }
 }

@@ -8,7 +8,7 @@ public class ModifiedPrinting {
         sc.close();
         System.out.println("\n" +
                 "\n" +
-                "Hi, \""+name+"\"\n" +
+                "Hi, \"" + name + "\"\n" +
                 "\tThe name of this exercise is 'Modifying printing'.\n" +
                 "\tTabulator, line change and quotations have already been used in this exercise.\n" +
                 "\tForward slash (\\) is also usable in printing.\n" +

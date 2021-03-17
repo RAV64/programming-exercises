@@ -1,5 +1,5 @@
 public class InvalidVariables {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         int number = 2;
         boolean truth = true;
         char character = 'A';

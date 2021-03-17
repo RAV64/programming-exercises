@@ -6,6 +6,6 @@ public class AbsoluteValue {
         System.out.print("Type in a floating point number: ");
         double num = sc.nextDouble();
         sc.close();
-        System.out.print("The absolute value of the given number is " + ((num<0) ? (-num) : (num)));
+        System.out.print("The absolute value of the given number is " + ((num < 0) ? (-num) : (num)));
     }
 }

@@ -11,7 +11,7 @@ public class SalaryCalculation {
         var tax = sc.nextDouble();
         sc.close();
         System.out.println("Salary before taxes: " + (wHours * hourly));
-        System.out.println("Amount of tax: " + (tax /100 * (wHours * hourly)));
-        System.out.println("Salary after taxes: " + ((wHours * hourly) - (tax/100 * (wHours * hourly))));
+        System.out.println("Amount of tax: " + (tax / 100 * (wHours * hourly)));
+        System.out.println("Salary after taxes: " + ((wHours * hourly) - (tax / 100 * (wHours * hourly))));
     }
 }
