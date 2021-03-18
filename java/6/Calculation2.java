@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Calculation {
+public class Calculation2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Choose from the following calculations:\n" +
