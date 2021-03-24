@@ -1,2 +1,1 @@
-# viope
-Eri koodikielten viope tehtävien vastaukset
+# Programming exercises and challenges
