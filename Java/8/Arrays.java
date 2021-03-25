@@ -5,19 +5,19 @@ public class Arrays {
         int[][] matrix = {{2}, {4, 6}, {8, 10, 12}, {14, 16}, {18}};
 
         System.out.print("Number in array: ");
-        for(int i = 0; i < numberArray.length; i++) {
-            System.out.print(numberArray[i] + " ");
+        for (int j : numberArray) {
+            System.out.print(j + " ");
         }
 
         System.out.print("\n\nNames in array: ");
-        for(int i = 0; i < nameArray.length; i++) {
-            System.out.print(nameArray[i] + " ");
+        for (String s : nameArray) {
+            System.out.print(s + " ");
         }
 
         System.out.println("\n\nMatrix elements: ");
-        for(int i = 0; i < matrix.length; i++) {
-            for(int j = 0; j < matrix[i].length; j++) {
-                System.out.print(matrix[i][j] + " ");
+        for (int[] ints : matrix) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
             }
             System.out.println("\t");
         }

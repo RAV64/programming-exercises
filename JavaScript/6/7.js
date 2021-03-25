@@ -9,7 +9,7 @@ function addName() {
     }
     document.getElementById("nameList").innerHTML = `Inserted names:${nameList}`;
     nameList = "";
-};
+}
 
 function makeDraw() {
     const winningIndex = Math.floor(Math.random() * names.length);
