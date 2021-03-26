@@ -16,17 +16,15 @@ public class TicTacToe {
                 {0, 0, 0},
                 {0, 0, 0}
         };
-        int turn;
         int moves = 9;
         boolean finished = false;
 
-        turn = randomizeStartingPlayer(p1, p2);
+        int turn = randomizeStartingPlayer(p1, p2);
 
         showBoard(board);
 
         do {
             turn = turn % 2 == 0 ? 1 : 2;
-            System.out.println(turn + " " + moves);
             moves--;
             if (moves == 0) {
                 finished = true;
@@ -40,10 +38,12 @@ public class TicTacToe {
                 System.out.print(column + "\t");
             }
             System.out.println();
+
         }
     }
 
     private static int randomizeStartingPlayer(String p1, String p2) {
-        return 0;
+        int startNum = (int)(Math.random()*100+1);
+        return (startNum % 2 == 0) ? 1 : 2;
     }
 }

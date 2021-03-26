@@ -4,11 +4,11 @@ public class SalaryCalculation {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Type in the amount of work hours: ");
-        var wHours = sc.nextDouble();
+        double wHours = sc.nextDouble();
         System.out.print("Type in the salary per hour: ");
-        var hourly = sc.nextDouble();
+        double hourly = sc.nextDouble();
         System.out.print("Type in the tax percent: ");
-        var tax = sc.nextDouble();
+        double tax = sc.nextDouble();
         sc.close();
         System.out.println("Salary before taxes: " + (wHours * hourly));
         System.out.println("Amount of tax: " + (tax / 100 * (wHours * hourly)));
