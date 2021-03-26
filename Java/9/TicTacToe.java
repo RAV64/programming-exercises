@@ -26,7 +26,7 @@ public class TicTacToe {
 
         do {
             turn = turn % 2 == 0 ? 1 : 2;
-            System.out.println(turn);
+            System.out.println(turn + " " + moves);
             moves--;
             if (moves == 0) {
                 finished = true;
