@@ -9,39 +9,41 @@ public class TicTacToe {
         String p1 = sc.nextLine();
         System.out.print("Please input player 2 name: ");
         String p2 = sc.nextLine();
+        boolean playMatch = true;
 
-        int[][] board = {
-                {0, 0, 0},
-                {0, 0, 0},
-                {0, 0, 0}
-        };
-        boolean first = true;
-        boolean finished;
+        while (playMatch) {
+            int[][] board = {
+                    {0, 0, 0},
+                    {0, 0, 0},
+                    {0, 0, 0}
+            };
+            boolean first = true;
+            boolean finished;
 
-        int turn = randomizeStartingPlayer();
-
-        showBoard(board);
-
-        do {
-            String player = turn % 2 == 0 ? p2 : p1;
-            System.out.println(first ? player + " starts" : player + "'s turn");
-
-            markBoard(board, turn);
+            int turn = randomizeStartingPlayer();
             showBoard(board);
-            finished = checkWinner(board);
-            turn = turn % 2 == 0 ? 1 : 2;
-            first = false;
+            do {
+                String player = turn % 2 == 0 ? p2 : p1;
+                System.out.println(first ? player + " starts" : player + "'s turn");
 
-        } while (!finished);
+                markBoard(board, turn);
+                showBoard(board);
+                finished = checkWinner(board);
+                turn = turn % 2 == 0 ? 1 : 2;
+                first = false;
 
-        gameFinished(turn, p1, p2);
+            } while (!finished);
+
+            playMatch = gameFinished(turn, p1, p2);
+        }
     }
 
-    private static void gameFinished(int turn, String p1, String p2) {
-
+    private static boolean gameFinished(int turn, String p1, String p2) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Game has ended!");
         System.out.println(turn % 2 == 0 ? p1 : p2 + " WON THE GAME");
-
+        System.out.println("\nPlay again? [y]/n");
+        return !sc.nextLine().equals("n");
     }
 
     private static boolean checkWinner(int[][] board) {
