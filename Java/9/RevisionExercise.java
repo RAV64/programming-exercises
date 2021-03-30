@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class RevisionExercise {
     public static void main(String[] args) {
@@ -15,22 +15,45 @@ public class RevisionExercise {
         printArray(realArray);
     }
 
-    private static int askInfo(int[] tempArray) {
-        return 0;
+    private static void setArray(int[] realArray) {
+        int tempNum;
+        for (int i = 0; i < realArray.length - 1; i++) {
+            for (int j = i + 1; j < realArray.length; j++) {
+                if (realArray[i] < realArray[j]) {
+                    tempNum = realArray[i];
+                    realArray[i] = realArray[j];
+                    realArray[j] = tempNum;
+                }
+            }
+        }
     }
 
     private static void copyInfo(int[] realArray, int[] tempArray) {
-        
+        System.arraycopy(tempArray, 0, realArray, 0, realArray.length);
     }
 
-    private static void setArray(int[] realArray) {
-
+    private static int askInfo(int[] tempArray) {
+        Scanner sc = new Scanner(System.in);
+        int nums = 1;
+        int newNum;
+        boolean quit = true;
+        do {
+            System.out.print(nums + ". number: ");
+            newNum = sc.nextInt();
+            if (newNum == 0) {
+                quit = false;
+            } else {
+                tempArray[nums - 1] = newNum;
+                nums++;
+            }
+        } while (quit);
+        return nums - 1;
     }
 
-    public static void printArray(int[] realArray ) {
+    public static void printArray(int[] realArray) {
         System.out.println("\nOrdered array: ");
-        for(int i = 0; i < realArray .length; i++) {
-            System.out.println(realArray [i]);
+        for (int j : realArray) {
+            System.out.println(j);
         }
     }
 }
