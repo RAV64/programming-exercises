@@ -34,20 +34,20 @@ public class RevisionExercise {
 
     private static int askInfo(int[] tempArray) {
         Scanner sc = new Scanner(System.in);
-        int nums = 1;
+        int nums = 0;
         int newNum;
         boolean quit = true;
         do {
-            System.out.print(nums + ". number: ");
+            System.out.print(nums + 1 + ". number: ");
             newNum = sc.nextInt();
             if (newNum == 0) {
                 quit = false;
             } else {
-                tempArray[nums - 1] = newNum;
+                tempArray[nums] = newNum;
                 nums++;
             }
         } while (quit);
-        return nums - 1;
+        return nums;
     }
 
     public static void printArray(int[] realArray) {
