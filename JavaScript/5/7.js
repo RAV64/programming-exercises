@@ -5,7 +5,7 @@ function calculateProfit() {
     let profits = 0;
 
     for (i = 0; i < rounds; i ++) {
-        const pips = Math.round((Math.random() * 5) + 1);
+        let pips = Math.round((Math.random() * 5) + 1);
 
         if (pips === 1 || pips === 3 || pips === 5) {
             wins += 0;
