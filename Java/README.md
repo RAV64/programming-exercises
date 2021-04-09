@@ -12,3 +12,5 @@
 - 13 - Inheritance
 - 14 - Interfaces
 - 16 - Exceptions and handling them
+- 17 - Data streams and files
+- 18 - Generic stacks
